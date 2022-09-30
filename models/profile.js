@@ -5,8 +5,7 @@ const Schema = mongoose.Schema
 const profileSchema = new Schema({
   name: String,
   avatar: String,
-}, {
-  timestamps: true
+  happy: { type: Schema.Types.ObjectId, ref: 'Happy' },
 })
 
 const Profile = mongoose.model('Profile', profileSchema)
