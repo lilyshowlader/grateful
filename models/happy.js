@@ -7,7 +7,9 @@ const happySchema = new Schema({
   description: String,
   date: Date,
   profile: { type: Schema.Types.ObjectId, ref: 'Profile' },
-  
+
+}, {
+  timestamps: true
 })
 
 const Happy = mongoose.model('Happy', happySchema)

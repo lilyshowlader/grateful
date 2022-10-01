@@ -8,6 +8,7 @@ import session from 'express-session'
 import logger from 'morgan'
 import methodOverride from 'method-override'
 import passport from 'passport'
+import ('./config/database.js')
 
 // import custom middleware
 import { passDataToView } from './middleware/middleware.js'
