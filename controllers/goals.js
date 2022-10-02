@@ -16,18 +16,23 @@ function create (req, res) {
 }
 
 // second goals is referring to the DATA
+
+
 function index (req, res) {
   Goal.find({})
   .then(goals => {
-    res.render('goals/index', {
-      goals: goals
+    Happy.find({})
+    .then(happys => {
+      res.render('goals/index', {
+        goals: goals,
+        happys: happys
+      })
     })
   })
 }
 
-
 export {
   newGoal as new,
   create,
-  index
+  index,
 }

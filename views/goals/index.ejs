@@ -1,7 +1,25 @@
 <link rel="stylesheet" href="/stylesheets/style.css" />
 
 <main>
-  <p id="logo">grateful<span id='period'>.</span></p>
+  <p id="logo">what makes me happy<span id='period'>.</span></p>
+  <table>
+    <thead>
+      <tr>
+        <th>happy things</th>
+        <th>date</th>
+      </tr>
+    </thead>
+  <tbody>
+    <% happys.forEach(happy => { %>
+      <tr>
+        <td><%= happy.description %></td>
+        <td><%= happy.date %></td>
+      </tr>
+    <% }) %>
+  </tbody>
+</table>
+
+  <p id="logo">goals<span id='period'>.</span></p>
   <table>
     <thead>
       <tr>
@@ -16,7 +34,6 @@
         <td><%= goal.goalDescription %></td>
         <td><%= goal.date %></td>
         <td><a href="/goals/<%= goal._id %>">details</a></td>
-        </td>
       </tr>
     <% }) %>
   </tbody>
