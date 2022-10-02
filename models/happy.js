@@ -4,8 +4,17 @@ const Schema = mongoose.Schema
 
 const happySchema = new Schema({
 
-  description: String,
-  date: Date,
+  description: {
+    type: String,
+    required: true,
+  }, 
+  date: {
+    type: Date,
+    default: function () {
+      return new Date().setFullYear(new Date().getFullYear())
+    },
+    required: true
+  },
   profile: { type: Schema.Types.ObjectId, ref: 'Profile' },
 
 }, {

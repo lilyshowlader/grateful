@@ -8,12 +8,12 @@ const router = Router()
 // GET 3000/goals/new -> view new goals page 
 router.get('/new', isLoggedIn, goalsCtrl.new)
 
-// POST  
-// router.post('/', isLoggedIn, goalsCtrl.create)
+// POST  -> to create 
+router.post('/', isLoggedIn, goalsCtrl.create)
 
 
-// GET 3000/goals/gratefulview -> view new goals page 
-// router.get('/gratefulview', isLoggedIn, goalsCtrl.index)
+// GET 3000/goals 
+router.get('/', isLoggedIn, goalsCtrl.index)
 
 export { 
   router

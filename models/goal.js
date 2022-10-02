@@ -4,8 +4,17 @@ const Schema = mongoose.Schema
 
 const goalSchema = new Schema({
 
-  goalDescription: String,
-  date: Date,
+  goalDescription: {
+    type: String,
+    required: true,
+  },
+  date: {
+    type: Date,
+    default: function () {
+      return new Date().setFullYear(new Date().getFullYear())
+    },
+    required: true
+  },
   goalMet: Boolean,
   profile: { type: Schema.Types.ObjectId, ref: 'Profile' },
   

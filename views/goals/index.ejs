@@ -1,0 +1,24 @@
+<link rel="stylesheet" href="/stylesheets/style.css" />
+
+<main>
+  <p id="logo">grateful<span id='period'>.</span></p>
+  <table>
+    <thead>
+      <tr>
+        <th>goals</th>
+        <th>date</th>
+        <th>details</th>
+      </tr>
+    </thead>
+  <tbody>
+    <% goals.forEach(goal => { %>
+      <tr>
+        <td><%= goal.goalDescription %></td>
+        <td><%= goal.date %></td>
+        <td><a href="/goals/<%= goal._id %>">details</a></td>
+        </td>
+      </tr>
+    <% }) %>
+  </tbody>
+</table>
+</main>

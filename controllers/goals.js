@@ -7,16 +7,27 @@ function newGoal (req, res) {
 }
 
 // the function below allows the user to CREATE the goal
-// function create (req, res) {
-//   Goal.create(req.body)
-//   .then(goal => {
-//     res.redirect('/goals/gratefulview')
-//   })
-// }
 
+function create (req, res) {
+  Goal.create(req.body)
+  .then(goal => {
+    res.redirect('/goals')
+  })
+}
+
+// second goals is referring to the DATA
+function index (req, res) {
+  Goal.find({})
+  .then(goals => {
+    res.render('goals/index', {
+      goals: goals
+    })
+  })
+}
 
 
 export {
   newGoal as new,
-
+  create,
+  index
 }
