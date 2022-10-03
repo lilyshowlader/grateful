@@ -15,9 +15,8 @@ function create (req, res) {
   })
 }
 
+// the function below allows the user to see all their happy and goal entries
 // second goals is referring to the DATA
-
-
 function index (req, res) {
   Goal.find({})
   .then(goals => {
@@ -31,8 +30,24 @@ function index (req, res) {
   })
 }
 
+// the function belows allows the user to delete their goal entries
+
+function deleteGoal (req, res) {
+  console.log("hitting")
+  Goal.findByIdAndDelete(req.params.id)
+  .then(() => {
+    res.redirect("/goals")
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect("/")
+  })
+}
+
+
 export {
   newGoal as new,
   create,
   index,
+  deleteGoal as delete,
 }

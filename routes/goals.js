@@ -8,12 +8,17 @@ const router = Router()
 // GET 3000/goals/new -> view new goals page 
 router.get('/new', isLoggedIn, goalsCtrl.new)
 
-// POST  -> to create 
+// POST 3000/goals -> to create a new goal
 router.post('/', isLoggedIn, goalsCtrl.create)
 
-
-// GET 3000/goals 
+// GET 3000/goals -> to view index page
 router.get('/', isLoggedIn, goalsCtrl.index)
+
+// DELETE 3000/goals/:id -> to delete individual goal
+router.delete('/:id', goalsCtrl.delete)
+
+
+
 
 export { 
   router
