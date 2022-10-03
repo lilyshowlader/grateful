@@ -57,11 +57,16 @@ function edit (req, res) {
   })
 }
 
+// the function below allows the user to update their happy
+function update (req, res) {
+ console.log("update button hitting")
+}
 
 export {
   newHappy as new,
   create,
   deleteHappy as delete, 
   show,
-  edit
+  edit,
+  update,
 }

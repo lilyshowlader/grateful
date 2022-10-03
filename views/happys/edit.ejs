@@ -5,5 +5,13 @@
   <p id="logo">what makes me happy<span id='period'>.</span></p>
   <section>
     <p> <%= happy.description %> </p>
+    <form id="happy-form" action="/happys/<%= happy._id %>?_method=PUT" method="POST">
+      <input 
+      type="text" 
+      name="description"
+      value="<%= happy.description %>"> 
+      <button type="submit">update</button>
+    </form>
+
   </section>
 </main>

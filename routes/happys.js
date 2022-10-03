@@ -20,6 +20,9 @@ router.delete('/:id', happysCtrl.delete)
 // SHOW -> show details of an individual happy
 router.get('/:id', happysCtrl.show)
 
+// PUT /happys/:id -> update the individual happy 
+router.put("/:id", happysCtrl.update)
+
 export {
   router,
 }
