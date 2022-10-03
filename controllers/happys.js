@@ -14,7 +14,7 @@ function create (req, res) {
   })
 }
 
-// the function belows allows the user to delete their goal entries
+// the function belows allows the user to delete their happy entries
 function deleteHappy (req, res) {
   console.log("hitting")
   Happy.findByIdAndDelete(req.params.id)
@@ -27,9 +27,23 @@ function deleteHappy (req, res) {
   })
 }
 
+function show(req, res) {
+  Happy.findById(req.params.id)
+  .then(happy => {
+    res.render('happys/show', { 
+      happy : happy
+    })    
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect("/")
+  })
+}
+
 
 export {
   newHappy as new,
   create,
   deleteHappy as delete, 
+  show
 }
