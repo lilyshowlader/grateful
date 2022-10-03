@@ -16,6 +16,11 @@
         <td><%= happy.description %></td>
         <td><%= happy.date.getUTCMonth() + 1 %>/<%= happy.date.getUTCDate() %>/<%= happy.date.getUTCFullYear() %> </td>
         <td><a href="/happys/<%= happy._id %>">click me :)</a></td>
+        <td>
+          <form action="/happys/<%= happy._id %>?_method=DELETE" method="POST">
+            <button>x</button>
+          </form>
+        </td>
       </tr>
     <% }) %>
   </tbody>

@@ -14,7 +14,22 @@ function create (req, res) {
   })
 }
 
+// the function belows allows the user to delete their goal entries
+function deleteHappy (req, res) {
+  console.log("hitting")
+  Happy.findByIdAndDelete(req.params.id)
+  .then(() => {
+    res.redirect("/goals")
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect("/")
+  })
+}
+
+
 export {
   newHappy as new,
   create,
+  deleteHappy as delete, 
 }

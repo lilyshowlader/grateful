@@ -31,7 +31,6 @@ function index (req, res) {
 }
 
 // the function belows allows the user to delete their goal entries
-
 function deleteGoal (req, res) {
   console.log("hitting")
   Goal.findByIdAndDelete(req.params.id)
@@ -43,6 +42,7 @@ function deleteGoal (req, res) {
     res.redirect("/")
   })
 }
+
 
 
 export {

@@ -1,5 +1,6 @@
 import { Router } from 'express'
 import passport from 'passport'
+import * as happysCtrl from '../controllers/happys.js'
 import * as goalsCtrl from '../controllers/goals.js'
 import { isLoggedIn } from '../middleware/middleware.js'
 
@@ -17,7 +18,8 @@ router.get('/', isLoggedIn, goalsCtrl.index)
 // DELETE 3000/goals/:id -> to delete individual goal
 router.delete('/:id', goalsCtrl.delete)
 
-
+// DELETE 3000/goals/:id -> to delete individual goal
+router.delete('/:id', happysCtrl.delete)
 
 
 export { 

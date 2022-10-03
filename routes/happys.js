@@ -11,6 +11,9 @@ router.get('/new', isLoggedIn, happysCtrl.new)
 // POST 
 router.post('/', isLoggedIn, happysCtrl.create)
 
+// DELETE 3000/goals/:id -> to delete individual goal
+router.delete('/:id', happysCtrl.delete)
+
 
 export {
   router,
