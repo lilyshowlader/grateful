@@ -7,6 +7,7 @@
       <tr>
         <th>happy things</th>
         <th>date</th>
+        <th>details</th>
       </tr>
     </thead>
   <tbody>
@@ -14,6 +15,7 @@
       <tr>
         <td><%= happy.description %></td>
         <td><%= happy.date.getUTCMonth() + 1 %>/<%= happy.date.getUTCDate() %>/<%= happy.date.getUTCFullYear() %> </td>
+        <td><a href="/happys/<%= happy._id %>">click me :)</a></td>
       </tr>
     <% }) %>
   </tbody>
@@ -35,7 +37,12 @@
       <tr>
         <td><%= goal.goalDescription %></td>
         <td><%= goal.date.getUTCMonth() + 1 %>/<%= goal.date.getUTCDate() %>/<%= goal.date.getUTCFullYear() %> </td>
-        <td><a href="/goals/<%= goal._id %>">details</a></td>
+        <td><a href="/goals/<%= goal._id %>">click me :)</a></td>
+        <td>
+          <form action="/goals/<%= goal._id %>?_method=DELETE" method="POST">
+            <button>x</button>
+          </form>
+        </td>
       </tr>
     <% }) %>
   </tbody>
