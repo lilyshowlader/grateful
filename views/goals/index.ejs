@@ -13,11 +13,13 @@
     <% happys.forEach(happy => { %>
       <tr>
         <td><%= happy.description %></td>
-        <td><%= happy.date %></td>
+        <td><%= happy.date.getUTCMonth() + 1 %>/<%= happy.date.getUTCDate() %>/<%= happy.date.getUTCFullYear() %> </td>
       </tr>
     <% }) %>
   </tbody>
 </table>
+
+
 
   <p id="logo">goals<span id='period'>.</span></p>
   <table>
@@ -32,10 +34,12 @@
     <% goals.forEach(goal => { %>
       <tr>
         <td><%= goal.goalDescription %></td>
-        <td><%= goal.date %></td>
+        <td><%= goal.date.getUTCMonth() + 1 %>/<%= goal.date.getUTCDate() %>/<%= goal.date.getUTCFullYear() %> </td>
         <td><a href="/goals/<%= goal._id %>">details</a></td>
       </tr>
     <% }) %>
   </tbody>
 </table>
 </main>
+
+
