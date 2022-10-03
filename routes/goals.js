@@ -15,6 +15,9 @@ router.post('/', isLoggedIn, goalsCtrl.create)
 // GET 3000/goals -> to view index page
 router.get('/', isLoggedIn, goalsCtrl.index)
 
+// GET 3000/goals/:id/edit -> view edit individual goal page 
+router.get("/:id/edit", goalsCtrl.edit)
+
 // DELETE 3000/goals/:id -> to delete individual goal
 router.delete('/:id', goalsCtrl.delete)
 

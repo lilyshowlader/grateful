@@ -1,3 +1,4 @@
+import { Model } from "mongoose"
 import { Goal } from "../models/goal.js"
 import { Happy } from "../models/happy.js"
 
@@ -27,6 +28,7 @@ function deleteHappy (req, res) {
   })
 }
 
+// the function belows allows the user to see an indiviual happy
 function show(req, res) {
   Happy.findById(req.params.id)
   .then(happy => {
@@ -40,10 +42,26 @@ function show(req, res) {
   })
 }
 
+// the function below allows a user to get to the edit page of their happy
+function edit (req, res) {
+  console.log("hitting")
+  Happy.findById(req.params.id)
+  .then (happy => {
+    res.render('happys/edit', {
+      happy : happy
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect("/")
+  })
+}
+
 
 export {
   newHappy as new,
   create,
   deleteHappy as delete, 
-  show
+  show,
+  edit
 }
