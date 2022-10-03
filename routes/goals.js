@@ -24,8 +24,11 @@ router.delete('/:id', goalsCtrl.delete)
 // DELETE 3000/goals/:id -> to delete individual goal
 router.delete('/:id', happysCtrl.delete)
 
-// SHOW
+// SHOW -> show an individual goal 
 router.get('/:id', goalsCtrl.show)
+
+// PUT /goals/:id -> update the individual happy 
+router.put("/:id", goalsCtrl.update)
 
 export { 
   router

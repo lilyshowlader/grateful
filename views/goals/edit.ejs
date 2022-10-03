@@ -3,5 +3,12 @@
   <p id="logo">goals<span id='period'>.</span></p>
   <section>
     <p> <%= goal.goalDescription %> </p>
+    <form id="goal-form" action="/goals/<%= goal._id %>?_method=PUT" method="POST">
+      <input 
+      type="text" 
+      name="description"
+      value="<%= goal.goalDescription %>"> 
+      <button type="submit">update</button>
+    </form>
   </section>
 </main>

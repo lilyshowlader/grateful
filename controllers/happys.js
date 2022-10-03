@@ -60,6 +60,14 @@ function edit (req, res) {
 // the function below allows the user to update their happy
 function update (req, res) {
  console.log("update button hitting")
+ Happy.findByIdAndUpdate(req.params.id, req.body, {new: true})
+  .then(happy => {
+    res.redirect('/goals')
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect("/")
+  })
 }
 
 export {

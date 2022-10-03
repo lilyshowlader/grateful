@@ -73,12 +73,25 @@ function edit (req, res) {
   })
 }
 
+// the function below allows the user to update their goal
 
+function update (req, res) {
+  console.log("update button hitting")
+  Goal.findByIdAndUpdate(req.params.id, req.body, {new: true})
+  .then(goal => {
+    res.redirect('/goals')
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect("/")
+  })
+}
 export {
   newGoal as new,
   create,
   index,
   deleteGoal as delete,
   show,
-  edit
+  edit,
+  update
 }
