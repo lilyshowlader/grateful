@@ -22,6 +22,20 @@ body {
   background-repeat: repeat-y;
 }
 
+#indexlogo {
+  margin-left: 0px;
+  text-align: center;
+  color: #7FD8BE;
+  font-size: 100px;
+  margin-top: 100px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+
 #logo {
   margin-left: 0px;
   text-align: center;
@@ -99,11 +113,23 @@ body {
 
 nav {
   background-color: #fefdfd;
-  color: #1a1a1a;
-  display: flex;
+  /* display: flex; */
   align-items: center;
   padding: 10px;
   min-height: 60px;
+  font-size: 26px;
+  font-weight: bold;
+  color: red;
+}
+
+a:link {
+  color:#FCAB64;
+}
+a:visited {
+  color:#FCAB64;
+}
+a:active {
+color:#FCAB64;
 }
 
 main {
