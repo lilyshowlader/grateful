@@ -21,9 +21,6 @@ router.get("/:id/edit", goalsCtrl.edit)
 // DELETE 3000/goals/:id -> to delete individual goal
 router.delete('/:id', goalsCtrl.delete)
 
-// DELETE 3000/goals/:id -> to delete individual goal
-router.delete('/:id', happysCtrl.delete)
-
 // SHOW -> show an individual goal 
 router.get('/:id', goalsCtrl.show)
 

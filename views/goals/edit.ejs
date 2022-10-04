@@ -1,10 +1,10 @@
 <link rel="stylesheet" href="/stylesheets/style.css" />
 <main>
-  <p id="logo">goals<span id='period'>.</span></p>
+  <p id="showlogo">goals<span id='period'>.</span></p>
   <section>
-    <p> <%= goal.goalDescription %> </p>
+    <p id="editfont"> <%= goal.goalDescription %> </p>
     <form id="goal-form" action="/goals/<%= goal._id %>?_method=PUT" method="POST">
-      <input 
+      <input id=happy-input
       type="text" 
       name="description"
       value="<%= goal.goalDescription %>"> 

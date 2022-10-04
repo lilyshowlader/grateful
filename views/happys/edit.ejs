@@ -2,11 +2,11 @@
 
 <link rel="stylesheet" href="/stylesheets/style.css" />
 <main>
-  <p id="logo">what makes me happy<span id='period'>.</span></p>
+  <p id="showlogo">what makes me happy<span id='period'>.</span></p>
   <section>
-    <p> <%= happy.description %> </p>
+    <p id="editfont"> <%= happy.description %> </p>
     <form id="happy-form" action="/happys/<%= happy._id %>?_method=PUT" method="POST">
-      <input 
+      <input id=happy-input
       type="text" 
       name="description"
       value="<%= happy.description %>"> 

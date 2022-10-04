@@ -15,17 +15,18 @@
   <table>
     <thead>
       <tr>
-        <th>happy things</th>
-        <th>date</th>
-        <th>details</th>
+        <th id="tableheaderfont">date</th>
+        <th id="tableheaderfont">happiness</th>
+        <th id="tableheaderfont">details</th>
+        <th id="tableheaderfont"></th>
       </tr>
     </thead>
   <tbody>
     <% happys.forEach(happy => { %>
       <tr>
-        <td><%= happy.description %></td>
-        <td><%= happy.date.getUTCMonth() + 1 %>/<%= happy.date.getUTCDate() %>/<%= happy.date.getUTCFullYear() %> </td>
-        <td><a href="/happys/<%= happy._id %>">click me :)</a></td>
+        <td id="tablefont"><%= happy.date.getUTCMonth() + 1 %>/<%= happy.date.getUTCDate() %>/<%= happy.date.getUTCFullYear() %> </td>
+        <td id="tablefont"><%= happy.description %></td>
+        <td id="tablefont"><a href="/happys/<%= happy._id %>">change me :)</a></td>
         <td>
           <form action="/happys/<%= happy._id %>?_method=DELETE" method="POST">
             <button>x</button>
@@ -42,17 +43,17 @@
   <table>
     <thead>
       <tr>
-        <th>goals</th>
-        <th>date</th>
-        <th>details</th>
+        <th id="tableheaderfont">date</th>
+        <th id="tableheaderfont">goals</th>
+        <th id="tableheaderfont">details</th>
       </tr>
     </thead>
   <tbody>
     <% goals.forEach(goal => { %>
       <tr>
-        <td><%= goal.goalDescription %></td>
-        <td><%= goal.date.getUTCMonth() + 1 %>/<%= goal.date.getUTCDate() %>/<%= goal.date.getUTCFullYear() %> </td>
-        <td><a href="/goals/<%= goal._id %>">click me :)</a></td>
+        <td id="tablefont"><%= goal.date.getUTCMonth() + 1 %>/<%= goal.date.getUTCDate() %>/<%= goal.date.getUTCFullYear() %> </td>
+        <td id="tablefont"><%= goal.goalDescription %></td>
+        <td id="tablefont"><a href="/goals/<%= goal._id %>">change me :)</a></td>
         <td>
           <form action="/goals/<%= goal._id %>?_method=DELETE" method="POST">
             <button>x</button>
