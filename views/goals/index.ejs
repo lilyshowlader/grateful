@@ -12,6 +12,7 @@
 
 <main>
   <p id="indexlogo">what makes me happy<span id='period'>.</span></p>
+  <div class="fix-table-head">
   <table>
     <thead>
       <tr>
@@ -21,7 +22,7 @@
         <th id="tableheaderfont"></th>
       </tr>
     </thead>
-  <tbody>
+    <tbody>
     <% happys.forEach(happy => { %>
       <tr>
         <td id="tablefont"><%= happy.date.getUTCMonth() + 1 %>/<%= happy.date.getUTCDate() %>/<%= happy.date.getUTCFullYear() %> </td>
@@ -36,10 +37,12 @@
     <% }) %>
   </tbody>
 </table>
+  </div>
 
 
 
   <p id="indexlogo">goals<span id='period'>.</span></p>
+  <div class="fix-table-head">
   <table>
     <thead>
       <tr>
@@ -63,6 +66,7 @@
     <% }) %>
   </tbody>
 </table>
+  </div>
 </main>
 
 
