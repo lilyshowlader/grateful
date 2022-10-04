@@ -48,6 +48,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  /* background-color: white;
+  border-radius: 8px; */
   
 }
 
@@ -171,6 +173,7 @@ button {
   display: flex;
   text-align: center;
   margin: 0 auto;
+  padding: 17px;
 }
 
 nav {
@@ -188,6 +191,7 @@ nav {
 .fix-table-head {
   overflow: auto;
   height: 250px;
+  margin-top: 0px;
 }
 
 .fix-table-head thead th {
@@ -204,16 +208,19 @@ a:active {
 color:#FCAB64;
 }
 
+/* .group {
+  background-color: white;
+  border-radius: 8px;
+} */
 
 table {
-  /* border: 1px solid #04AA6D;; */
   font-weight: bold;
   background-color: white;
   border-collapse:separate;
-  border-radius:8px;
+  border-radius: 10px;
   text-align: center;
   padding: 40px;
-  padding-top: 50px;
+  padding-top: 20px;
 }
 
 td {
@@ -234,12 +241,32 @@ main {
 }
 
 
-@media only screen and (min-width: 768px) {
-  .flexbox-container {
+@media only screen and (max-width: 768px) {
+ 
+  #logo {
+    margin-left: 0px;
+    text-align: center;
+    color: #7FD8BE;
+    font-size: 140px;
+    margin-top: 300px;
+    margin-bottom: 0px;
+    font-weight: bold;
     display: flex;
-    justify-content: center;
     align-items: center;
-    margin-top: 85px;
-    height: 650px;
+    justify-content: center;
+    background-color: white;
+    border-radius: 8px;
+    
+  }
+
+  #happytoday {
+    text-align: center;
+    color: #FCAB64;
+    font-size: 30px;
+    margin-top: 0px;
+    font-weight: bold;
+    border-radius: 8px;
+    background-color: white;
+    padding-bottom: 8px;
   }
 }

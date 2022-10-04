@@ -1,41 +1,36 @@
 import { Goal } from "../models/goal.js"
 import { Happy } from "../models/happy.js"
+import { Profile } from "../models/profile.js"
 
 // the function below allows the user to VIEW the page where they can input their goal
 function newGoal (req, res) {
   res.render("goals/new")
 }
 
+
 // the function below allows the user to CREATE the goal
 
 function create (req, res) {
+  req.body.profile = req.user.profile._id
   Goal.create(req.body)
   .then(goal => {
-    res.redirect('/goals')
-  })
-}
-
-// the function below allows the user to see all their happy and goal entries
-// second goals is referring to the DATA
-function index (req, res) {
-  Goal.find({})
-  .then(goals => {
-    Happy.find({})
-    .then(happys => {
-      res.render('goals/index', {
-        goals: goals,
-        happys: happys
-      })
+    Profile.updateOne(
+      {_id: req.user.profile},
+      {$push: {goals:goal}}
+    )
+    .then(() => {
+      res.redirect(`/profiles`)
     })
   })
 }
+
 
 // the function belows allows the user to delete their goal entries
 function deleteGoal (req, res) {
   console.log("hitting")
   Goal.findByIdAndDelete(req.params.id)
   .then(() => {
-    res.redirect("/goals")
+    res.redirect("/profiles")
   })
   .catch(err => {
     console.log(err)
@@ -79,17 +74,19 @@ function update (req, res) {
   console.log("update button hitting")
   Goal.findByIdAndUpdate(req.params.id, req.body, {new: true})
   .then(goal => {
-    res.redirect('/goals')
+    console.log('hitting')
+    res.redirect('/profiles')
   })
   .catch(err => {
     console.log(err)
     res.redirect("/")
   })
 }
+
+
 export {
   newGoal as new,
   create,
-  index,
   deleteGoal as delete,
   show,
   edit,

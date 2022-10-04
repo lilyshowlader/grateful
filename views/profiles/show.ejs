@@ -23,7 +23,7 @@
       </tr>
     </thead>
     <tbody>
-    <% happys.forEach(happy => { %>
+    <% profile.happys.forEach(happy => { %>
       <tr>
         <td id="tablefont"><%= happy.date.getUTCMonth() + 1 %>/<%= happy.date.getUTCDate() %>/<%= happy.date.getUTCFullYear() %> </td>
         <td id="tablefont"><%= happy.description %></td>
@@ -52,7 +52,7 @@
       </tr>
     </thead>
   <tbody>
-    <% goals.forEach(goal => { %>
+    <% profile.goals.forEach(goal => { %>
       <tr>
         <td id="tablefont"><%= goal.date.getUTCMonth() + 1 %>/<%= goal.date.getUTCDate() %>/<%= goal.date.getUTCFullYear() %> </td>
         <td id="tablefont"><%= goal.goalDescription %></td>

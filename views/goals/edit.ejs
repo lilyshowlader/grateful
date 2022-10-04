@@ -1,4 +1,6 @@
 <link rel="stylesheet" href="/stylesheets/style.css" />
+
+
 <main>
   <p id="showlogo">goals<span id='period'>.</span></p>
   <section>
@@ -6,7 +8,7 @@
     <form id="goal-form" action="/goals/<%= goal._id %>?_method=PUT" method="POST">
       <input id=happy-input
       type="text" 
-      name="description"
+      name="goalDescription"
       value="<%= goal.goalDescription %>"> 
       <button class="updatebuttons-style" type="submit">update</button>
     </form>

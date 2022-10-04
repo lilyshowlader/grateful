@@ -9,23 +9,20 @@ const router = Router()
 // GET 3000/goals/new -> view new goals page 
 router.get('/new', isLoggedIn, goalsCtrl.new)
 
+// GET 3000/goals/:id/edit -> view edit individual goal page 
+router.get("/:id/edit", isLoggedIn, goalsCtrl.edit)
+
 // POST 3000/goals -> to create a new goal
 router.post('/', isLoggedIn, goalsCtrl.create)
 
-// GET 3000/goals -> to view index page
-router.get('/', isLoggedIn, goalsCtrl.index)
-
-// GET 3000/goals/:id/edit -> view edit individual goal page 
-router.get("/:id/edit", goalsCtrl.edit)
-
 // DELETE 3000/goals/:id -> to delete individual goal
-router.delete('/:id', goalsCtrl.delete)
+router.delete('/:id',isLoggedIn,  goalsCtrl.delete)
 
 // SHOW -> show an individual goal 
-router.get('/:id', goalsCtrl.show)
+router.get('/:id', isLoggedIn, goalsCtrl.show)
 
 // PUT /goals/:id -> update the individual happy 
-router.put("/:id", goalsCtrl.update)
+router.put("/:id", isLoggedIn, goalsCtrl.update)
 
 export { 
   router

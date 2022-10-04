@@ -9,19 +9,19 @@ const router = Router()
 router.get('/new', isLoggedIn, happysCtrl.new)
 
 // GET 3000/happys/:id/edit -> view edit individual happy page 
-router.get("/:id/edit", happysCtrl.edit)
+router.get("/:id/edit", isLoggedIn, happysCtrl.edit)
 
 // POST 3000/happys -> to create a new happy
 router.post('/', isLoggedIn, happysCtrl.create)
 
 // DELETE 3000/happys/:id -> to delete individual happy
-router.delete('/:id', happysCtrl.delete)
+router.delete('/:id', isLoggedIn, happysCtrl.delete)
 
 // SHOW -> show details of an individual happy
-router.get('/:id', happysCtrl.show)
+router.get('/:id', isLoggedIn, happysCtrl.show)
 
 // PUT /happys/:id -> update the individual happy 
-router.put("/:id", happysCtrl.update)
+router.put("/:id", isLoggedIn, happysCtrl.update)
 
 export {
   router,

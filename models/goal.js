@@ -6,7 +6,6 @@ const goalSchema = new Schema({
 
   goalDescription: {
     type: String,
-    required: true,
   },
   date: {
     type: Date,
