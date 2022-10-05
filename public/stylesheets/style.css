@@ -312,4 +312,15 @@ main {
   .mobile {
     font-size: 30px;
   }
+
+  nav {
+    background-color: #fefdfd;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 10px;
+    min-height: 60px;
+    font-size: 23px;
+    font-weight: bold;
+  }
 }
