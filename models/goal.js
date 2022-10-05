@@ -14,7 +14,6 @@ const goalSchema = new Schema({
     },
     required: true
   },
-  goalMet: Boolean,
   profile: { type: Schema.Types.ObjectId, ref: 'Profile' },
   
 }, {

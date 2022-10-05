@@ -1,16 +1,14 @@
-<link rel="stylesheet" href="/stylesheets/style.css" />
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
 </head>
+
 <body>
 <nav>
-  <a 
-  href="/profiles" >
-  grateful view
-</a>
-
+  <a href="/profiles"> grateful view </a>
 </nav>
 
 <main>
-  <p id="showlogo">what makes me happy<span id='period'>.</span></p>
+  <p id="showlogo" class="mobile">what makes me happy<span id='period'>.</span></p>
   <section>
     <p id="editfont"> <%= happy.description %> </p>
     <a href="/happys/<%= happy._id %>/edit">
@@ -18,3 +16,5 @@
     </a>
   </section>
 </main>
+
+<%- include('../partials/footer') %>

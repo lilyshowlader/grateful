@@ -239,3 +239,76 @@ main {
 }
 
 
+
+
+/* 768px is a common "breakpoint" width for tablets */
+@media only screen and (max-width: 600px) {
+  #logo {
+    margin-left: 0px;
+    text-align: center;
+    color: #7FD8BE;
+    font-size: 90px;
+    margin-top: 300px;
+    margin-bottom: 0px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 8px;
+  }
+
+  #happytoday {
+    text-align: center;
+    color: #FCAB64;
+    font-size: 30px;
+    margin-top: 0px;
+    font-weight: bold;
+    background-color: white;
+    border-radius: 8px;
+    padding-bottom: 7px;
+  }
+
+  #indexlogo {
+    margin-left: 0px;
+    text-align: center;
+    color: #7FD8BE;
+    font-size: 60px;
+    margin-top: 100px;
+    margin-bottom: 0px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 8px;
+  }
+
+  body {
+    background-color: #ffffff;
+    color: #000000;
+    /* Use a system font, if none are available use any found sans-sarif font */
+    font-family: "Times New Roman", serif;
+    margin: 0;
+    background-image: url("https://i.imgur.com/L3f5AEG.jpg");
+  }
+
+  table {
+    font-weight: bold;
+    background-color: white;
+    border-collapse:separate;
+    border-radius: 10px;
+    text-align: center;
+    padding: 40px;
+    padding-top: 20px;
+  }
+  
+  td {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .mobile {
+    font-size: 30px;
+  }
+}

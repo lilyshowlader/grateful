@@ -1,14 +1,11 @@
-<link rel="stylesheet" href="/stylesheets/style.css" />
-
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
 </head>
-<body>
-<nav>
-  <a 
-  href="/profiles" >
-  grateful view
-</a>
 
-</nav>
+<body>
+  <nav>
+  <a href="/profiles"> grateful view </a>
+  </nav>
 
 
 <p id="logo">grateful<span id='period'>.</span></p>
@@ -19,3 +16,5 @@
   <input type="text" name="goalDescription" id="happy-input">
   <button id="happybutton" type="submit">click me :)</button>
 </form>
+
+<%- include('../partials/footer') %>
