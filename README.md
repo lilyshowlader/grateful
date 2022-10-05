@@ -1,66 +1,43 @@
-# MEN Stack with OAuth Template
+# grateful.
 
-This is a MEN Stack template that includes OAuth.
+## Welcome to the grateful. app!
+What a rollercoaster of emotions life can be sometimes. This app was created for users to take a moment to step back and appreciate all of the positivity in their life. 
+<br/>
+<br/>
+*"Acknowledging the good that you already have in your life is the foundation for all abundance." -Eckhart Tolle*
+<br/>
+<br/>
 
-Use this to go build things! 🚀
+### Here is a link to my app: https://grateful.fly.dev/
 
-## To Use This Template
+## Planning Materials:
+### Below is my wireframe:
+<img width="339" alt="Screen Shot 2022-10-05 at 1 31 07 PM" src="https://user-images.githubusercontent.com/111258832/194124275-9ca5bcbb-1393-4cc5-a586-927ecdcd95b3.png">
+<img width="342" alt="Screen Shot 2022-10-05 at 1 31 53 PM" src="https://user-images.githubusercontent.com/111258832/194124394-cdfa750a-0fb6-4ca2-bf79-c92b47645eaa.png">
 
-__Replace `<name-of-your-app-here>` in the commands below with the name of your app!__
+### ERD:
+<img width="293" alt="Screen Shot 2022-10-05 at 1 32 41 PM" src="https://user-images.githubusercontent.com/111258832/194124534-8a97ed9e-0a70-4443-9c6a-9888e996d1d4.png">
 
-```bash
-git clone https://github.com/SEI-Remote/men-stack-oauth-template.git <name-of-your-app-here>
-cd <name-of-your-app-here>
-```
+#### Link to Trello Board: https://trello.com/b/b0LZkbN0/grateful
 
-Once you are in the project directory:
 
-```bash
-rm -rf .git
-```
+### Desktop View:
+### Mobile View:
+<img width="490" alt="Screen Shot 2022-10-05 at 1 23 07 PM" src="https://user-images.githubusercontent.com/111258832/194122796-8418ad95-9ac5-4f9e-966e-6b2da27a559e.png">
 
-Here's what your command line output should like after this step (note that the indicator that we are in a git repository is gone!)
 
-<img src="https://i.imgur.com/L47kNOZ.png" alt="The command line before and after running the rm -rf .git command. Before git:(main) is visible indiating that the directory contains a git repository, after the command it is not.">
+## Technologies Used:
+- VS Code
+- Github
+- CSS
+- Node.js
+- Express.js
+- Javascript
+- EJS
+- Whimsical
+- Git 
+- Trello
 
-Re-initialize a git repository:
 
-```bash
-git init
-```
-
-Create a repo for this project on GitHub and add that remote to your project with `git remote add origin Your-repo-URL-here`.
-
-Run npm i to fetch the template's dependencies:
-
-```bash
-npm i
-```
-
-touch a .env file:
-
-```bash
-touch .env
-```
-
-Fill it with the following:
-
-```
-DATABASE_URL=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-GOOGLE_CLIENT_ID=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-GOOGLE_SECRET=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-SESSION_SECRET=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-```
-
-Replace the `DATABASE_URL`, `GOOGLE_CLIENT_ID`, `GOOGLE_SECRET`, and `SESSION_SECRET` with values that you provide.
-
-Delete this `README.md` file and finally, make an initial commit:
-
-```bash
-git add .
-git commit -m "initial commit"
-git push -u origin main
-```
-
-You're done!
+## Next Steps:
 # grateful
