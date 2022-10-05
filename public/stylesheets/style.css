@@ -58,6 +58,20 @@ body {
   border-radius: 8px;
 }
 
+#happyshowlogo{
+  margin-left: 0px;
+  text-align: center; 
+  color: #7FD8BE;
+  font-size: 80px;
+  margin-top: 250px;
+  margin-bottom: 0px;
+  padding-bottom: 25px;
+  font-weight: bold;
+  display: flex;
+  background-color: white;
+  border-radius: 8px;
+}
+
 #period {
   color: #FCD29F;
 }
@@ -219,8 +233,6 @@ main {
 
 
 
-
-/* 768px is a common "breakpoint" width for tablets */
 @media only screen and (max-width: 600px) {
   #logo {
     margin-left: 0px;
@@ -232,6 +244,7 @@ main {
     display: flex;
     background-color: white;
     border-radius: 8px;
+    padding-left: 9px;
   }
 
   #happytoday {
@@ -243,6 +256,8 @@ main {
     background-color: white;
     border-radius: 8px;
     padding-bottom: 7px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   #indexlogo {
@@ -251,6 +266,20 @@ main {
     font-size: 60px;
     margin-top: 100px;
     margin-bottom: 0px;
+    font-weight: bold;
+    display: flex;
+    background-color: white;
+    border-radius: 8px;
+  }
+
+  #happyshowlogo {
+    margin-left: 0px;
+    text-align: center; 
+    color: #7FD8BE;
+    font-size: 60px;
+    margin-top: 250px;
+    margin-bottom: 0px;
+    padding-bottom: 25px;
     font-weight: bold;
     display: flex;
     background-color: white;
