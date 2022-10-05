@@ -27,14 +27,20 @@ function create (req, res) {
 
 // the function belows allows the user to delete their happy entries
 function deleteHappy (req, res) {
-  console.log("hitting")
-  Happy.findByIdAndDelete(req.params.id)
-  .then(() => {
-    res.redirect("/profiles")
+  Happy.findById(req.params.id)
+  .then(happy => {
+    if (happy.profile.equals(req.user.profile._id)) {
+      happy.delete()
+      .then(() => {
+        res.redirect('/profiles')
+      })
+    } else {
+      throw new Error ('not authorized')
+    }   
   })
   .catch(err => {
     console.log(err)
-    res.redirect("/")
+    res.redirect('/')
   })
 }
 
@@ -68,16 +74,21 @@ function edit (req, res) {
 }
 
 // the function below allows the user to update their happy
-
-function update (req, res) {
- console.log("update button hitting")
- Happy.findByIdAndUpdate(req.params.id, req.body, {new: true})
+function update(req, res) {
+  Happy.findById(req.params.id)
   .then(happy => {
-    res.redirect('/profiles')
+    if (happy.profile.equals(req.user.profile._id)) {
+      happy.updateOne(req.body)
+      .then(()=> {
+        res.redirect('/profiles')
+      })
+    } else {
+      throw new Error('not authorized')
+    }
   })
   .catch(err => {
     console.log(err)
-    res.redirect("/")
+    res.redirect(`/`)
   })
 }
 

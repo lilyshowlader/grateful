@@ -5,7 +5,7 @@ import { isLoggedIn } from '../middleware/middleware.js'
 const router = Router()
 
 
-// SHOW -> show an individual goal 
+// GET 
 router.get('/', isLoggedIn, profilesCtrl.show)
 
 

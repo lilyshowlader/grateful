@@ -8,8 +8,7 @@ function newGoal (req, res) {
 }
 
 
-// the function below allows the user to CREATE the goal
-
+// the function below allows the user to CREATE the goal 
 function create (req, res) {
   req.body.profile = req.user.profile._id
   Goal.create(req.body)
@@ -27,14 +26,20 @@ function create (req, res) {
 
 // the function belows allows the user to delete their goal entries
 function deleteGoal (req, res) {
-  console.log("hitting")
-  Goal.findByIdAndDelete(req.params.id)
-  .then(() => {
-    res.redirect("/profiles")
+  Goal.findById(req.params.id)
+  .then(goal => {
+    if (goal.profile.equals(req.user.profile._id)) {
+      goal.delete()
+      .then(() => {
+        res.redirect('/profiles')
+      })
+    } else {
+      throw new Error ('not authorized')
+    }   
   })
   .catch(err => {
     console.log(err)
-    res.redirect("/")
+    res.redirect('/')
   })
 }
 
@@ -69,17 +74,21 @@ function edit (req, res) {
 }
 
 // the function below allows the user to update their goal
-
-function update (req, res) {
-  console.log("update button hitting")
-  Goal.findByIdAndUpdate(req.params.id, req.body, {new: true})
+function update(req, res) {
+  Goal.findById(req.params.id)
   .then(goal => {
-    console.log('hitting')
-    res.redirect('/profiles')
+    if (goal.profile.equals(req.user.profile._id)) {
+      goal.updateOne(req.body)
+      .then(()=> {
+        res.redirect('/profiles')
+      })
+    } else {
+      throw new Error('not authorized')
+    }
   })
   .catch(err => {
     console.log(err)
-    res.redirect("/")
+    res.redirect(`/`)
   })
 }
 

@@ -113,12 +113,13 @@ body {
   text-align: center;
   color: #FCAB64;
   font-size: 25px;
-  /* margin-top: 20px; */
   font-weight: bold;
   background-color: white;
   margin-top: 0px;
   padding-top: 10px;
   padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
   border-radius: 8px;
 }
 
@@ -208,10 +209,7 @@ a:active {
 color:#FCAB64;
 }
 
-/* .group {
-  background-color: white;
-  border-radius: 8px;
-} */
+
 
 table {
   font-weight: bold;
@@ -241,32 +239,3 @@ main {
 }
 
 
-@media only screen and (max-width: 768px) {
- 
-  #logo {
-    margin-left: 0px;
-    text-align: center;
-    color: #7FD8BE;
-    font-size: 140px;
-    margin-top: 300px;
-    margin-bottom: 0px;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
-    border-radius: 8px;
-    
-  }
-
-  #happytoday {
-    text-align: center;
-    color: #FCAB64;
-    font-size: 30px;
-    margin-top: 0px;
-    font-weight: bold;
-    border-radius: 8px;
-    background-color: white;
-    padding-bottom: 8px;
-  }
-}

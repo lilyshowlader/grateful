@@ -24,6 +24,7 @@ router.get('/:id', isLoggedIn, goalsCtrl.show)
 // PUT /goals/:id -> update the individual happy 
 router.put("/:id", isLoggedIn, goalsCtrl.update)
 
+
 export { 
   router
 }
