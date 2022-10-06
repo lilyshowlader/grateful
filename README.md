@@ -41,4 +41,8 @@ What a rollercoaster of emotions life can be sometimes. This app was created for
 
 
 ## Next Steps:
+- Text wrap on table
+- Fixed headers
+- Checkbox feature for goals
+- Mobile view improvements
 # grateful

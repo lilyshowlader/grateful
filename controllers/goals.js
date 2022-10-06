@@ -24,7 +24,7 @@ function create (req, res) {
 }
 
 
-// the function belows allows the user to delete their goal entries
+// the function belows allows the user to DELETE their goal entries
 function deleteGoal (req, res) {
   Goal.findById(req.params.id)
   .then(goal => {
@@ -44,6 +44,7 @@ function deleteGoal (req, res) {
 }
 
 
+// the function below allows a user to view the details of their goal. 
 function show(req, res) {
   Goal.findById(req.params.id)
   .then(goal => {
@@ -58,7 +59,7 @@ function show(req, res) {
 }
 
 
-// the function below allows a user to get to the edit page of their happy
+// the function below allows a user to view a page that allows them to edit their goal.
 function edit (req, res) {
   console.log("hitting")
   Goal.findById(req.params.id)
@@ -72,6 +73,7 @@ function edit (req, res) {
     res.redirect("/")
   })
 }
+
 
 // the function below allows the user to update their goal
 function update(req, res) {
@@ -91,6 +93,7 @@ function update(req, res) {
     res.redirect(`/`)
   })
 }
+
 
 
 export {

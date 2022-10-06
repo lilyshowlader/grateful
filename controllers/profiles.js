@@ -1,6 +1,7 @@
 import { Profile } from "../models/profile.js"
 
 
+// the function below displays all of the happy and goal entries linked to the user's profile. 
 
 function show(req, res) {
   Profile.findById(req.user.profile._id)

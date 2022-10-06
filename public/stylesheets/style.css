@@ -58,7 +58,7 @@ body {
   border-radius: 8px;
 }
 
-#happyshowlogo{
+#happyshowlogo {
   margin-left: 0px;
   text-align: center; 
   color: #7FD8BE;
@@ -202,8 +202,6 @@ a:active {
 color:#FCAB64;
 }
 
-
-
 table {
   font-weight: bold;
   background-color: white;
@@ -218,7 +216,6 @@ td {
   padding-left: 30px;
   padding-right: 30px;
 }
-
 
 main {
   display: flex;

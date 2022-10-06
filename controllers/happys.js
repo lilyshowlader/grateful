@@ -1,7 +1,8 @@
 import { Profile } from "../models/profile.js"
 import { Happy } from "../models/happy.js"
 
-// the function below allows the user to VIEW the page where they can input their happy input
+
+// the function below allows the user to VIEW the page where they can input their happy input.
 function newHappy (req, res) {
   res.render("happys/new")
   .catch(err => {
@@ -10,7 +11,8 @@ function newHappy (req, res) {
   })
 }
 
-// the function below allows the user to CREATE the happy input
+
+// the function below allows the user to CREATE the happy input.
 function create (req, res) {
   req.body.profile = req.user.profile._id
   Happy.create(req.body)
@@ -25,7 +27,8 @@ function create (req, res) {
   })
 }
 
-// the function belows allows the user to delete their happy entries
+
+// the function belows allows the user to DELETE their happy entries.
 function deleteHappy (req, res) {
   Happy.findById(req.params.id)
   .then(happy => {
@@ -44,7 +47,8 @@ function deleteHappy (req, res) {
   })
 }
 
-// the function belows allows the user to see an indiviual happy
+
+// the function belows allows the user to see the details of their happy entry
 function show(req, res) {
   Happy.findById(req.params.id)
   .then(happy => {
@@ -58,7 +62,8 @@ function show(req, res) {
   })
 }
 
-// the function below allows a user to get to the edit page of their happy
+
+// the function below allows a user to view the EDIT page of their happy entry
 function edit (req, res) {
   console.log("hitting")
   Happy.findById(req.params.id)
@@ -73,7 +78,8 @@ function edit (req, res) {
   })
 }
 
-// the function below allows the user to update their happy
+
+// the function below allows the user to UPDATE their happy
 function update(req, res) {
   Happy.findById(req.params.id)
   .then(happy => {
@@ -91,6 +97,7 @@ function update(req, res) {
     res.redirect(`/`)
   })
 }
+
 
 
 export {
