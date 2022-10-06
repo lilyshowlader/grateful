@@ -32,6 +32,7 @@ body {
   display: flex;
   background-color: white;
   border-radius: 8px;
+  padding-left: 10px;
 }
 
 #logo {
@@ -131,6 +132,7 @@ body {
   border-radius: 8px;
 }
 
+
 #happybutton {
   background-color: #04AA6D;
   border: none;
@@ -223,6 +225,13 @@ main {
   justify-content: center;
   flex-direction: column;
 }
+
+th {
+  position: sticky;
+  background-color: white;
+}
+
+
 
 .right {
   margin-left: auto;
