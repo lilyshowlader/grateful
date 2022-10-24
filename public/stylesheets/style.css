@@ -39,10 +39,12 @@ body {
   color: #7FD8BE;
   font-size: 140px;
   margin-top: 300px;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
   font-weight: bold;
   display: flex;
   justify-content: center;
+  background-color: white;
+  border-radius: 8px;
 }
 
 #showlogo {
@@ -127,9 +129,11 @@ body {
   text-align: center;
   color: #FCAB64;
   font-size: 30px;
-  margin-top: 20px;
+  margin-top: 0px;
   font-weight: bold;
   border-radius: 8px;
+  background-color: white;
+  padding: 20px;
 }
 
 
@@ -243,14 +247,14 @@ th {
   #logo {
     margin-left: 0px;
     color: #7FD8BE;
-    font-size: 90px;
+    font-size: 120px;
     margin-top: 300px;
     margin-bottom: 0px;
     font-weight: bold;
     display: flex;
     background-color: white;
-    border-radius: 8px;
     padding-left: 9px;
+    border-radius: none;
   }
 
   #happytoday {
