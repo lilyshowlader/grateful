@@ -22,8 +22,6 @@ body {
   margin-bottom: 0px;
   font-weight: bold;
   display: flex;
-  background-color: white;
-  border-radius: 8px;
   padding-left: 10px;
 }
 
@@ -35,8 +33,6 @@ body {
   font-weight: bold;
   display: flex;
   justify-content: center;
-  background-color: white;
-  border-radius: 8px;
 }
 
 #showlogo {
@@ -49,8 +45,6 @@ body {
   padding-bottom: 25px;
   font-weight: bold;
   display: flex;
-  background-color: white;
-  border-radius: 8px;
 }
 
 #happyshowlogo {
@@ -63,8 +57,6 @@ body {
   padding-bottom: 25px;
   font-weight: bold;
   display: flex;
-  background-color: white;
-  border-radius: 8px;
 }
 
 #period {
@@ -107,13 +99,11 @@ body {
   color: #FCAB64;
   font-size: 25px;
   font-weight: bold;
-  background-color: white;
   margin-top: 0px;
   padding-top: 10px;
   padding-bottom: 20px;
   padding-left: 20px;
   padding-right: 20px;
-  border-radius: 8px;
 }
 
 #happytoday {
@@ -123,7 +113,6 @@ body {
   margin-top: 0px;
   font-weight: bold;
   border-radius: 8px;
-  background-color: white;
   padding: 20px;
 }
 
@@ -137,9 +126,6 @@ body {
   text-decoration: none;
   display: flex;
   font-size: 16px;
-  margin: 4px 2px;
-  border-radius: 50px;
-  margin: 0 auto;
   margin-top: 10px;
 }
 
@@ -175,7 +161,7 @@ nav {
   justify-content: flex-end;
   padding: 10px;
   min-height: 60px;
-  font-size: 0px;
+  font-size: 20px;
   font-weight: bold;
 }
 
@@ -191,7 +177,7 @@ nav {
 }
 
 a:link {
-  color:white;
+  color:#FCAB64;
 }
 a:visited {
   color:#FCAB64;
@@ -244,7 +230,6 @@ th {
     margin-bottom: 0px;
     font-weight: bold;
     display: flex;
-    background-color: white;
     padding-left: 9px;
     border-radius: none;
   }
@@ -255,7 +240,6 @@ th {
     font-size: 30px;
     margin-top: 0px;
     font-weight: bold;
-    background-color: white;
     border-radius: 8px;
     padding-bottom: 7px;
     padding-left: 10px;
@@ -270,8 +254,6 @@ th {
     margin-bottom: 0px;
     font-weight: bold;
     display: flex;
-    background-color: white;
-    border-radius: 8px;
   }
 
   #happyshowlogo {
@@ -284,8 +266,6 @@ th {
     padding-bottom: 25px;
     font-weight: bold;
     display: flex;
-    background-color: white;
-    border-radius: 8px;
   }
 
   body {
@@ -293,7 +273,6 @@ th {
     color: #000000;
     font-family: "Times New Roman", serif;
     margin: 0;
-    /* background-image: url("https://i.imgur.com/L3f5AEG.jpg"); */
   }
 
   table {
