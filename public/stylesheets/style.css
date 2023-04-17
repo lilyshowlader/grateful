@@ -4,20 +4,17 @@ html {
 
 
 body {
-  background-color: #ffffff;
+  background-color: #31493c;
   color: #000000;
   font-family: 'Times New Roman', serif;
   margin: 0;
-  /* background-image: url("https://i.imgur.com/L3f5AEG.jpg"); */
-  /* background-position: right;
-  background-repeat: repeat-y; */
 }
 
 #indexlogo {
   margin-left: 0px;
   text-align: center;
   color: #7FD8BE;
-  font-size: 100px;
+  font-size: 80px;
   margin-top: 100px;
   margin-bottom: 0px;
   font-weight: bold;
@@ -26,7 +23,7 @@ body {
 }
 
 #logo {
-  color: #7FD8BE;
+  color: white;
   font-size: 140px;
   margin-top: 200px;
   margin-bottom: 0px;
@@ -80,6 +77,8 @@ body {
   font-size: 16px;
   margin: 4px 2px;
   border-radius: 50px;
+  font-family: Arial;
+  color: white;
 }
 
 
@@ -172,6 +171,7 @@ nav {
   margin-top: 0px;
 }
 
+
 .fix-table-head thead th {
   top: 0;
 }
@@ -224,7 +224,7 @@ th {
 @media only screen and (max-width: 600px) {
   #logo {
     margin-left: 0px;
-    color: #7FD8BE;
+    color: white;
     font-size: 100px;
     margin-top: 160px;
     margin-bottom: 0px;
@@ -268,12 +268,7 @@ th {
     display: flex;
   }
 
-  body {
-    background-color: #ffffff;
-    color: #000000;
-    font-family: "Times New Roman", serif;
-    margin: 0;
-  }
+
 
   table {
     font-weight: bold;
